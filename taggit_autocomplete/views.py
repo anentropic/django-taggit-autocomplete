@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.core import serializers
 from taggit.models import Tag
-import simplejson
+from django.utils import simplejson
 from django.utils.datastructures import MultiValueDictKeyError
 
 def list_tags(request):
