@@ -13,7 +13,7 @@ class TaggableManager(BaseTaggableManager):
             "label": _("Tags"),
             "help_text": _("A comma-separated list of tags."),
             "required": not self.blank,
-            "widget": TagAutocomplete
+            "widget": TagAutocomplete,
         }
         defaults.update(kwargs)
         
