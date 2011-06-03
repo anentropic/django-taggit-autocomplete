@@ -4,7 +4,7 @@ http://code.google.com/p/django-tagging-autocomplete/
 It's virtually the same app, only it's changed to work with django-taggit:
 http://github.com/alex/django-taggit
 
-This branch has been forked from eka's version.  I've placed the js in a static folder for ease of implementation.
+This branch has been forked from eka's version.  As long as used with grappelli, no extra js is needed.
 
 *** Installation ***
 
@@ -12,8 +12,7 @@ This branch has been forked from eka's version.  I've placed the js in a static 
    2. Download django-taggit-autocomplete and use setup.py to install it on your system:
 		python setup.py install
    3. Add "taggit_autocomplete" to installed apps in your project's settings.
-   4. Run python manage.py collectstatic
-   5. Add the following line to your project's urls.py file:
+   4. Add the following line to your project's urls.py file:
 
       (r'^taggit_autocomplete/', include('taggit_autocomplete.urls')),
 
