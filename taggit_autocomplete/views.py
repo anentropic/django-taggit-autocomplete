@@ -16,5 +16,4 @@ def list_tags(request):
 	except MultiValueDictKeyError:
 		pass
 	tags = list(tags)
-        print "TAGS: %s" % tags
 	return HttpResponse(simplejson.dumps(tags), mimetype='text/javascript')
