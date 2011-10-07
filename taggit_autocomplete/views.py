@@ -1,14 +1,20 @@
 from django.http import HttpResponse
-from django.core import serializers
-from taggit.models import Tag
-from django.utils import simplejson
 from django.utils.datastructures import MultiValueDictKeyError
+from django.utils import simplejson
+
+from taggit.models import Tag
 
 def list_tags(request):
 	try:
-		tags = Tag.objects.filter(name__istartswith=request.GET['q']).values_list('name', flat=True)
-		data = [{'value': t, 'name': t} for t in tags]
+		#tempTags = Tag.objects.filter(name__icontains=request.GET['term']).values_list('name', flat=True)
+                tempTags = Tag.objects.filter(name__istartswith=request.GET['term'])
+                tags = set()
+                for tagValues in tempTags:
+                    singleTags = tagValues.name.split(',')
+                    if len(singleTags) == 1:
+                        tags.add(singleTags[0])
 	except MultiValueDictKeyError:
-		data = []
-	
-	return HttpResponse(simplejson.dumps(data), mimetype='application/json')
+		pass
+	tags = list(tags)
+        print "TAGS: %s" % tags
+	return HttpResponse(simplejson.dumps(tags), mimetype='text/javascript')
