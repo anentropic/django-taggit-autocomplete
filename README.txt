@@ -1,7 +1,5 @@
 This is a fork of django-taggit-autocomplete (https://github.com/Jaza/django-taggit-autocomplete), adapted for working with http://code.drewwilson.com/entry/autosuggest-jquery-plugin
 
-This branch has been forked from eka's version.  As long as used with grappelli, no extra js is needed.
-
 *** Installation ***
 
    1. You need to have django-taggit already installed
@@ -11,6 +9,7 @@ This branch has been forked from eka's version.  As long as used with grappelli,
    4. Add the following line to your project's urls.py file:
 
       (r'^taggit_autocomplete/', include('taggit_autocomplete.urls')),
+   5. Install JQueryUI and  a Theme
 
 *** Usage ***
 ** Using the model field **
