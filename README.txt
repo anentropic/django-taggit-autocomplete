@@ -10,7 +10,7 @@ This is a fork of django-taggit-autocomplete (https://github.com/Jaza/django-tag
       (r'^taggit_autocomplete/', include('taggit_autocomplete.urls')),
    5. Install jQuery UI and a Theme
       ...if you are using Grappelli (highly recommended) then you already have jQuery UI in the Admin.
-   6. Run ./manage/py collectstatic
+   6. Run ./manage.py collectstatic
 
 *** Usage ***
 ** Using the model field **
