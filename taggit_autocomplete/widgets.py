@@ -71,9 +71,9 @@ class TagAutocomplete(forms.TextInput):
 
         class Media:
             css = {
-                'all': ('%scss/autoSuggest.css' % settings.STATIC_URL,)
+                'all': ('%sjquery-autocomplete/css/autosuggest.css' % settings.STATIC_URL,)
             }
-            #js = (
-            #    '%sjs/jquery.autoSuggest.minified.js' % settings.STATIC_URL,
-            #)
+            js = (
+                '%sjquery-autocomplete/js/jquery.autosuggest.minified.js' % settings.STATIC_URL,
+            )
 
