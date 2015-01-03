@@ -1,4 +1,7 @@
-import json
+try:
+    from django.utils import simplejson as json
+except ImportError:
+    import json
 from django.http import HttpResponse
 from django.utils.datastructures import MultiValueDictKeyError
 
