@@ -5,7 +5,7 @@ long_description = open('README.txt').read()
  
 setup(
     name='django-taggit-autocomplete',
-    version='0.2',
+    version='0.3',
     description='Autocompletion for django-taggit',
     long_description=long_description,
     author='Flavio Curella',
